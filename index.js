@@ -12,5 +12,13 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map((newTitle) => {
+    return newTitle.split(" ").map((word) => {
+      return (word.charAt(0).toUpperCase() + word.substring(1));
+    }).join(" ");
+  })
+};
+
+console.log(titleCased(tutorials))
+
+//Praise Google!
